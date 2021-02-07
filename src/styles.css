@@ -1,0 +1,121 @@
+/* add css module styles here (optional) */
+.df-container {
+  position: relative;
+}
+.df-container > span {
+  color: #FFFFFF;
+}
+.df-container.loading {
+  position: relative;
+  min-height: 80px;
+}
+
+.df-container.loading.blur:before {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.df-container.loading:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  display: block;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 64px 64px;
+  -webkit-background-size: 64px 64px;
+  -moz-background-size: 64px 64px;
+  -o-background-size: 64px 64px;
+}
+
+.df-container canvas {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.df-container .video-layer {
+  background-color: black;
+}
+
+.df-container #commandArea, .df-container #actionArea {
+  width: 100%;
+  height: 25px;
+  position: absolute;
+  text-align: center;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.df-container #commandArea p, .df-container #actionArea p {
+  margin: 3px;
+}
+
+.df-container #commandArea {
+  top: 30px;
+}
+
+.df-container #actionArea {
+  bottom: 30px;
+}
+
+.df-container .bounceball {
+  position: relative;
+  display: inline-block;
+  height: 37px;
+  width: 15px;
+}
+
+.df-container .bounceball:before {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 0;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #fbae17;
+  transform-origin: 50%;
+  -webkit-animation: bounce 500ms alternate infinite ease;
+  animation: bounce 500ms alternate infinite ease;
+}
+
+.df-container @-webkit-keyframes bounce {
+  0% {
+    top: 30px;
+    height: 5px;
+    border-radius: 60px 60px 20px 20px;
+    transform: scaleX(2);
+  }
+
+  35% {
+    height: 15px;
+    border-radius: 50%;
+    transform: scaleX(1);
+  }
+
+  100% {
+    top: 0;
+  }
+}
+
+.df-container @keyframes bounce
+{
+  0% {
+    top: 30px;
+    height: 5px;
+    border-radius: 60px 60px 20px 20px;
+    transform: scaleX(2);
+  }
+  35% {
+    height: 15px;
+    border-radius: 50%;
+    transform: scaleX(1);
+  }
+  100% {
+    top: 0;
+  }
+}

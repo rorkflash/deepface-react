@@ -1,7 +1,7 @@
 {
   "name": "deepface-react",
   "version": "1.0.0",
-  "description": "Made with create-react-library",
+  "description": "ID Reader module from Deep Face System",
   "author": "Ashot Gasparyan",
   "license": "MIT",
   "repository": "Ashot Gasparyan/deepface-react",
@@ -45,9 +45,12 @@
     "prettier": "^2.0.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "^3.4.1"
+    "react-scripts": "^3.4.1",
+    "sass-loader": "^8.0.0",
+    "node-sass": "^4.0.0"
   },
   "files": [
     "dist"
-  ]
+  ],
+  "dependencies": {}
 }
