@@ -121,7 +121,7 @@ fd.append("type", '0');
 fd.append("tid", tid);
 
 fetch(url, {
-  method: 'PUT',
+  method: 'POST',
   body: fd,
 })
 ```
@@ -130,6 +130,44 @@ response
 
 ```json
 
+```
+
+#### get detection
+request /api/detection/{tid}
+
+```javascript
+fetch("/api/detection/{tid}", {
+    method: 'GET',
+    headers: {'Content-Type': 'application/json'}
+})
+```
+
+response
+```json
+{
+  "data":
+    {
+      "copy":false,
+      "items":[
+        {"bbox":[23,152,738,429],"class":"id_front","classIndex":1,"copy":false,"face":{"annotation":null,"height":151,"landMarks":[],"width":151,"x":98,"y":204},"image":"/Users/rork/Documents/projects/deepcontrol/server/idscanner/media/11612768009645/1612768027.jpg","mrz":null,"score":1.0},
+        {"bbox":[13,124,758,447],"class":"id_back","classIndex":2,"copy":false,"face":null,"image":"/Users/rork/Documents/projects/deepcontrol/server/idscanner/media/11612768009645/1612768039.jpg","mrz":{"Country":"ARM","DateOfBirth":"841022","Expiration_date":"231216","FirstName":"ASHOT","LastName":"GASPARYAN","Lines":["I<ARM0003855599<<<<<<<<<<<<<<<","8410227M2312167ARM<<<<<<<<<<<4","GASPARYAN<<ASHOT<<<<<<<<<<<<<<"],"MrzType":"TD1","Nationality":"ARM","SerialNumber":"000385559","Sex":"M","Type":"I<","Valid":true},"score":1.0}
+      ],
+      "list":[
+        {"bbox":[207,143,435,287],"class":"id_front","classIndex":1,"copy":false,"face":{"annotation":null,"height":104,"landMarks":[],"width":104,"x":55,"y":131},"image":"/Users/rork/Documents/projects/deepcontrol/server/idscanner/media/11612768009645/1612768021.jpg","mrz":null,"score":0.99},
+        {"bbox":[23,152,738,429],"class":"id_front","classIndex":1,"copy":false,"face":{"annotation":null,"height":151,"landMarks":[],"width":151,"x":98,"y":204},"image":"/Users/rork/Documents/projects/deepcontrol/server/idscanner/media/11612768009645/1612768027.jpg","mrz":null,"score":1.0},
+        {"bbox":[13,124,758,447],"class":"id_back","classIndex":2,"copy":false,"face":null,"image":"/Users/rork/Documents/projects/deepcontrol/server/idscanner/media/11612768009645/1612768039.jpg","mrz":{"Country":"ARM","DateOfBirth":"841022","Expiration_date":"231216","FirstName":"ASHOT","LastName":"GASPARYAN","Lines":["I<ARM0003855599<<<<<<<<<<<<<<<","8410227M2312167ARM<<<<<<<<<<<4","GASPARYAN<<ASHOT<<<<<<<<<<<<<<"],"MrzType":"TD1","Nationality":"ARM","SerialNumber":"000385559","Sex":"M","Type":"I<","Valid":true},"score":1.0}
+      ],
+      "mrz":{"Country":"ARM","DateOfBirth":"841022","Expiration_date":"231216","FirstName":"ASHOT","LastName":"GASPARYAN","Lines":["I<ARM0003855599<<<<<<<<<<<<<<<","8410227M2312167ARM<<<<<<<<<<<4","GASPARYAN<<ASHOT<<<<<<<<<<<<<<"],"MrzType":"TD1","Nationality":"ARM","SerialNumber":"000385559","Sex":"M","Type":"I<","Valid":true}},
+  "success":true
+}
+```
+
+#### get image
+request: /api/media/{tid}/{image name}
+
+example
+```text
+http://localhost:8080/api/media/11612768009645/1612768027.jpg
 ```
 
 #### verify
