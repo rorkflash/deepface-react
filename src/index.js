@@ -10,7 +10,10 @@ export function DeepScanner(props) {
   useEffect(() => {
     console.log("useEffect init");
     // eslint-disable-next-line react/prop-types
-    const faceID = new DCFaceID({ url: props.host, headers: {} })
+    const faceID = new DCFaceID({
+      url: props.host,
+      headers: {'rr-key1': "value1"}
+    })
     const size = 300
     const _ds = faceID.createDeepScan('s-cont', {
       // eslint-disable-next-line react/prop-types

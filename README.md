@@ -195,6 +195,7 @@ response
     "data":
     {
         "copy": false,
+        "docType": "id",
         "items": [
         {
             "bbox": [19, 140, 738, 436],
@@ -224,8 +225,8 @@ response
             "mrz":
             {
                 "Country": "USA",
-                "DateOfBirth": "841022",
-                "Expiration_date": "231216",
+                "DateOfBirth": "22.10.1984",
+                "Expiration_date": "16.12.2023",
                 "FirstName": "SMITH",
                 "LastName": "JOHN",
                 "Lines": ["I<USA0012345679<<<<<<<<<<<<<<<", "8410227M2312087USA<<<<<<<<<<<4", "JOHN<<SMITH<<<<<<<<<<<<<<"],
@@ -285,8 +286,8 @@ response
             "mrz":
             {
                 "Country": "USA",
-                "DateOfBirth": "841022",
-                "Expiration_date": "231216",
+                "DateOfBirth": "22.10.1984",
+                "Expiration_date": "16.12.2023",
                 "FirstName": "SMITH",
                 "LastName": "JOHN",
                 "Lines": ["I<USA0012345679<<<<<<<<<<<<<<<", "8410227M2512087USA<<<<<<<<<<<4", "JOHN<<SMITH<<<<<<<<<<<<<<"],
@@ -309,8 +310,8 @@ response
             "mrz":
             {
                 "Country": "USA",
-                "DateOfBirth": "841022",
-                "Expiration_date": "231216",
+                "DateOfBirth": "22.10.1984",
+                "Expiration_date": "16.12.2023",
                 "FirstName": "SMITH",
                 "LastName": "JOHN",
                 "Lines": ["I<USA0012345679<<<<<<<<<<<<<<<", "8410227M2512087USA<<<<<<<<<<<4", "JOHN<<SMITH<<<<<<<<<<<<<<"],
@@ -326,8 +327,8 @@ response
         "mrz":
         {
             "Country": "USA",
-            "DateOfBirth": "841022",
-            "Expiration_date": "231216",
+            "DateOfBirth": "22.10.1984",
+            "Expiration_date": "16.12.2023",
             "FirstName": "SMITH",
             "LastName": "JOHN",
             "Lines": ["I<USA0012345679<<<<<<<<<<<<<<<", "8410227M2512087USA<<<<<<<<<<<4", "JOHN<<SMITH<<<<<<<<<<<<<<"],

@@ -17,7 +17,8 @@ function ResultView(props) {
     function getNormalizedDate(date)
     {
         if (date) {
-            return moment(date, "YYMMDD").format('MMMM Do YYYY');
+            // return moment(date, "YYMMDD").format('MMMM Do YYYY');
+            return moment(date, "DD.MM.YYYY").format('MMMM Do YYYY');
         }
         return null;
     }
