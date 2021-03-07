@@ -14,6 +14,7 @@ function ScannerView(props) {
     const [result, setResult] = useState(null);
     const [size, setSize] = useState(null);
     const [start, setStart] = useState(false);
+    const [verify, setVerify] = useState(null);
 
     useEffect(() => {
         // console.log('useEffect');
@@ -78,19 +79,34 @@ function ScannerView(props) {
 
     function onFinished(result)
     {
-
+      setResult(result);
+      // onComplete(result);
+      if (result != null) {
+        if (result.status === true) {
+          toVerify(result);
+        } else {
+          if (result.msg) {
+            onComplete({success:false, msg: result.msg});
+          }
+        }
+      }
     }
 
-    function verify(data)
+    function toVerify(data)
     {
-        // faceID.verify({scanner:data}, (result) => {
-        //     onComplete(result);
-        // });
+      setVerify({scanner:data})
+    }
+
+    function onVerify(result)
+    {
+      setVerify(null)
+      onComplete(result);
     }
 
     function onComplete(result)
     {
-        //ds.close();
+        // ds.close();
+        setStart(false);
         if (typeof props.onComplete === "function") {
             props.onComplete(result);
         }
@@ -111,6 +127,8 @@ function ScannerView(props) {
                   onCommand={(command) => { onCommand(command) }}
                   onFinished={(result) => { onFinished(result) }}
                   start={start}
+                  verify={verify}
+                  onVerified={(result) => { onVerify(result) }}
                 />
                 :
                 null
