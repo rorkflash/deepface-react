@@ -42,7 +42,7 @@ function ScannerView(props) {
     useEffect(() => {
         if (result != null) {
             if (result.status === true) {
-                verify(result);
+                toVerify(result);
             } else {
                 if (result.msg) {
                     onComplete({success:false, msg: result.msg});
