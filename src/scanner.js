@@ -24,6 +24,9 @@ export default function DeepScanner(props) {
       scan_worker_path: props.scan_worker_path || 'js/deepscanworker.min.js',
       face_worker_path: props.face_worker_path || 'js/deeptinyfaceworker.min.js',
       useServerSide: props.useServerSide || true,
+      text: {
+        processing: "some processing text..."
+      },
       onInit: () => {
         if (props.onInit !== undefined && typeof props.onInit == 'function') {
           props.onInit()

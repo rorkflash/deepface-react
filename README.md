@@ -61,6 +61,9 @@ window.onload = function() {
                   scan_worker_path: 'js/deepscanworker.min.js',
                   face_worker_path: 'js/deeptinyfaceworker.min.js',
                   useServerSide: true,
+                  text: {
+                    processing: "text of processing"
+                  },
                   onInit: () => {
                   },
                   onCardDetected: (cards) => {
