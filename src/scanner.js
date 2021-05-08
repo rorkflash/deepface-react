@@ -27,6 +27,7 @@ export default function DeepScanner(props) {
       text: {
         processing: "some processing text..."
       },
+      visual: (props.visual || { showArea: true, showTitle: true }),
       onInit: () => {
         if (props.onInit !== undefined && typeof props.onInit == 'function') {
           props.onInit()

@@ -61,6 +61,10 @@ window.onload = function() {
                   scan_worker_path: 'js/deepscanworker.min.js',
                   face_worker_path: 'js/deeptinyfaceworker.min.js',
                   useServerSide: true,
+                  visual: {
+                    showArea: true,
+                    showTitle: true
+                  },
                   text: {
                     processing: "text of processing"
                   },

@@ -129,6 +129,7 @@ function ScannerView(props) {
                   start={start}
                   verify={verify}
                   onVerified={(result) => { onVerify(result) }}
+                  visual={{showTitle: true}}
                 />
                 :
                 null
